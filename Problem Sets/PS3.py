@@ -4,8 +4,6 @@ import random
 #Wordlist is given in .txt format
 WORDLIST_FILENAME = "words.txt"
 
-
-
 def loadWords():
     """
     Returns a list of valid words. Words are strings of lowercase letters.
