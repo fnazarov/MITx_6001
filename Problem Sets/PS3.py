@@ -140,3 +140,6 @@ def hangman(secretWord):
         print ( "Congratulations, you won!" )
     else:
         print ( "Game over" )
+if __name__ == '__main__':
+    word_list = load_words()
+    play_game(word_list)
