@@ -14,6 +14,6 @@ def Hanoi(n,fr,spare, to):
     if n==1:
         PrintMoves(fr,to)
     else:
-        return Hanoi(n-1,fr,spare,to)
-        return Hanoi(1,fr,to,spare)
-        return Hanoi(n-1,spare,to,fr)
+        Hanoi(n-1,fr,spare,to)
+        Hanoi(1,fr,to,spare)
+        Hanoi(n-1,spare,to,fr)
