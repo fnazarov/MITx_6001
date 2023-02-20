@@ -1,7 +1,9 @@
 'This is the solution of the PS3 '
 import random
 
+#Wordlist is given in .txt format
 WORDLIST_FILENAME = "words.txt"
+
 
 
 def loadWords():
