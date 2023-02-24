@@ -19,9 +19,13 @@ class Int_set(object):
         return self._vals[:]
 
     def union(self, other):
-        u=other()
+        """
+
+        :type other: list
+        """
+        u=other
         for i in other:
-            if i not in self._vals:
+            if i in not self._vals:
                 u+=i
         return u
     def add(self,new_elems):
