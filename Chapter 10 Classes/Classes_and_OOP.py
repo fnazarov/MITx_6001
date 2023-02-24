@@ -105,5 +105,21 @@ class Grades(object):
             self.is_sorted=True
         return self.students[:]
 
+def grade_report(course):
+    """Assumes course is of Grade class type created above"""
+    report=''
+    for s in course.get_students():
+        tot=0.0
+        num_grades=0
+        for g in course.get_grades(s):
+            tot += g
+            num_grades += 1
+        try:
+            average = tot / num_grades
+            report = f"{report} \n {s} 's mean grade is {average}"
+        except ZeroDivisionError:
+            report = f"{report} \n{s} has no grades"
+        return report
+
 
 
