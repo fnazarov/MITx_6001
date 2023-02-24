@@ -104,6 +104,11 @@ class Grades(object):
             self.students.sort()
             self.is_sorted=True
         return self.students[:]
+    def __str__(self):
+        if self.students==[]:
+            return ()
+        else:
+            print(self.students)
 
 def grade_report(course):
     """Assumes course is of Grade class type created above"""
@@ -116,9 +121,9 @@ def grade_report(course):
             num_grades += 1
         try:
             average = tot / num_grades
-            report = f"{report} \n {s} 's mean grade is {average}"
+            report = f"{report}\n{s}'s mean grade is {average}"
         except ZeroDivisionError:
-            report = f"{report} \n{s} has no grades"
+            report = f"{report}\n{s} has no grades"
         return report
 
 
