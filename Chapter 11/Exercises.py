@@ -12,3 +12,24 @@ def int_to_str(i):
         i= i//10
     return result
 int_to_str(30)
+
+def add_digits(n):
+    """
+    Ass
+    """
+    return 
+def get_binary_rep(n, num_digits):
+    """
+    Asummes n and num_digits are non-negative ints 
+    Return a str of length numDigits that is a binary representation of n
+    """
+    result = ''
+    while n>0:
+        result = str(n%2) + result
+        n = n//2
+    if len(result) > num_digits:
+        raise ValueError(' not enough digits')
+    for i in range(num_digits - len(result)):
+        result = '0' + result
+    return result
+get_binary_rep(30,8)
