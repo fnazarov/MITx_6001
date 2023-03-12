@@ -32,4 +32,21 @@ def get_binary_rep(n, num_digits):
     for i in range(num_digits - len(result)):
         result = '0' + result
     return result
-get_binary_rep(30,8)
+
+def gen_powerset(L):
+    """
+    Assumes L is a list 
+    Returns a list of lists that contains all possible combinations of the elements of L.
+    E.g. if L is [1,2] it will return a list with elements [],[1][2] and [1,2]
+    """
+    powerset= []
+    for i in range(0, 2**len(L)):
+        bin_str = get_binary_rep(i,len(L))
+        subset = []
+        for j in range(len(L)):
+            if bin_str[j] == '1':
+                subset.append(L[j])
+        powerset.append(subset)
+    return powerset
+
+print(gen_powerset([1,2,3,4]))
