@@ -293,5 +293,4 @@ print ( 'Actual Output:',plaintext.get_message_text_encrypted () )
 
 # Example test case (CiphertextMessage)
 ciphertext = CiphertextMessage ( 'Cdchtcht ldgsh: ipmx staxrpit' )
-)
 print ( 'Actual Output:',ciphertext.decrypt_message () )
